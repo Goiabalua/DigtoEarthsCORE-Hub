@@ -48,7 +48,7 @@ Tabs.Main:AddButton({
                     -- Carregar a tela de seleção de jogos via loadstring
                     -- Substitua pelo seu link real
                     local selectionMenuCode = [[
-                        local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/Goiabalua/Goiaba.lua-Menu/refs/heads/main/Menu/Dig%20to%20Earth's%20CORE!%20Menu%20by%20Goiaba.lua.lua",true))()
+                        local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
                         local Window = Fluent:CreateWindow({
                             Title = "Game Selection",
                             SubTitle = "by Goiaba.lua",
@@ -66,7 +66,7 @@ Tabs.Main:AddButton({
                             Callback = function()
                                 Window:Destroy()
                                 -- Substitua pelo seu link real do script do jogo
-                                loadstring(game:HttpGet("https://your-game-script-link.com/dig-to-earths-core.lua"))()
+                                loadstring(game:HttpGet("https://your-game-script-link.com/dig-to-earths-core.lua"))()loadstring(game:HttpGet("https://raw.githubusercontent.com/Goiabalua/Goiaba.lua-Menu/refs/heads/main/Menu/Dig%20to%20Earth's%20CORE!%20Menu%20by%20Goiaba.lua.lua",true))()
                             end
                         })
                         -- Botão para outro jogo (exemplo)
