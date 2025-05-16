@@ -21,7 +21,7 @@ local function verifyKey(userKey)
     local success, response = pcall(function()
         -- URL do seu Pastebin (substitua pela sua URL real)
         -- Você deve criar um Work.ink que redireciona para este Pastebin
-        local pastebinUrl = "https://pastebin.com/raw/vjHhz7WY"  -- Substitua XXXXXX pelo ID do seu Pastebin
+        local pastebinUrl = "https://pastebin.com/raw/m3mipH5v"  -- Substitua XXXXXX pelo ID do seu Pastebin
 
         -- Obter a chave válida do Pastebin
         local validKey = game:HttpGet(pastebinUrl, true)
