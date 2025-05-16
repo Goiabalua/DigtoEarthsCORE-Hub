@@ -93,7 +93,7 @@ Tabs.Main:AddButton({
                         Description = "Load the script for Dig to Earth's CORE!",
                         Callback = function()
                             Window:Destroy()
-                            loadstring(game:HttpGet("https://raw.githubusercontent.com/Goiabalua/Goiaba.lua-Hub/refs/heads/main/Hub/Dig%20to%20Earth's%20CORE!%20Menu%20by%20Goiaba.lua.lua",true))()
+                            loadstring(game:HttpGet("https://gist.githubusercontent.com/Goiabalua/c4dcb5e20a65e06058dd6f1ab8e142cd/raw/6120f89ac8d653b1430bef37eaa4182085e95aa2/gistfile1.txt",true))()
                         end
                     })
                     -- Botão para outro jogo (exemplo)
