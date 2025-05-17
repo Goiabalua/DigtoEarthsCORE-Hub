@@ -96,7 +96,7 @@ Tabs.Main:AddButton({
                     })
                     -- Botão para outro jogo (exemplo)
                     Tabs.Main:AddButton({
-                        Title = "Jogo 2",
+                        Title = "Coming Soon - Game 2",
                         Description = "Load the script to Game 2",
                         Callback = function()
                             Window:Destroy()
