@@ -1,7 +1,7 @@
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Key System",
+    Title = "Goiaba.lua Hub - Key System",
     SubTitle = "by Goiaba.lua",
     TabWidth = 130,
     Size = UDim2.fromOffset(560, 360),
@@ -24,24 +24,24 @@ local function verifyKey(userKey)
     end)
     
     if not success then
-        return false, "Erro de conexão. Tente novamente mais tarde."
+        return false, "Connection error. Please try again later."
     end
     
     if response == "VALID" then
-        return true, "Chave verificada com sucesso!"
+        return true, "Key verified successfully!"
     elseif response == "INVALID" then
-        return false, "Chave inválida ou expirada."
+        return false, "Invalid or expired key."
     else
-        return false, "Resposta inesperada do servidor."
+        return false, "Unexpected response from server."
     end
 end
 
 -- Input para inserir a chave
 Tabs.Main:AddInput("KeyInput", {
-    Title = "Digite sua Chave",
-    Description = "Insira uma chave válida para desbloquear o menu.",
+    Title = "Enter your Key",
+    Description = "Enter a valid key to unlock the hub.",
     Default = "",
-    Placeholder = "Cole sua chave aqui",
+    Placeholder = "Paste your key here",
     Numeric = false,
     Callback = function(value)
     end
@@ -49,14 +49,14 @@ Tabs.Main:AddInput("KeyInput", {
 
 -- Botão para verificar a chave
 Tabs.Main:AddButton({
-    Title = "Verificar Chave",
-    Description = "Verifique se a chave é válida.",
+    Title = "Verify Key",
+    Description = "Check if the key is valid.",
     Callback = function()
         local key = Options.KeyInput.Value
         if key and key ~= "" then
             Fluent:Notify({
-                Title = "Verificando",
-                Content = "Checando a chave, por favor aguarde...",
+                Title = "Checking",
+                Content = "Checking key, please wait...",
                 Duration = 3
             })
             
@@ -64,8 +64,8 @@ Tabs.Main:AddButton({
             
             if isValid then
                 Fluent:Notify({
-                    Title = "Sucesso",
-                    Content = "Chave verificada! Carregando o menu...",
+                    Title = "Success!",
+                    Content = "Key verified! Loading hub...",
                     Duration = 3
                 })
                 
@@ -76,7 +76,7 @@ Tabs.Main:AddButton({
                 local selectionMenuCode = [[
                     local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
                     local Window = Fluent:CreateWindow({
-                        Title = "Seleção de Jogos",
+                        Title = "Game Selection",
                         SubTitle = "by Goiaba.lua",
                         TabWidth = 120,
                         Size = UDim2.fromOffset(450, 300),
@@ -88,7 +88,7 @@ Tabs.Main:AddButton({
                     -- Botão para Dig to Earth's CORE!
                     Tabs.Main:AddButton({
                         Title = "Dig to Earth's CORE!",
-                        Description = "Carregar o script para Dig to Earth's CORE!",
+                        Description = "Load the script to Dig to Earth's CORE!",
                         Callback = function()
                             Window:Destroy()
                             loadstring(game:HttpGet("https://gist.githubusercontent.com/Goiabalua/8cd1e81ce31375fbf65d480facfa9e03/raw/e5953afbcfa4de1abdfaa8df2c3cec0ec34f8cd7/gistfile1.txt",true))()
@@ -97,7 +97,7 @@ Tabs.Main:AddButton({
                     -- Botão para outro jogo (exemplo)
                     Tabs.Main:AddButton({
                         Title = "Jogo 2",
-                        Description = "Carregar o script para Jogo 2",
+                        Description = "Load the script to Game 2",
                         Callback = function()
                             Window:Destroy()
                             loadstring(game:HttpGet("https://your-game-script-link.com/jogo2.lua"))()
@@ -105,8 +105,8 @@ Tabs.Main:AddButton({
                     })
                     Window:SelectTab(1)
                     Fluent:Notify({
-                        Title = "Seleção de Jogos",
-                        Content = "Selecione um jogo para carregar o script.",
+                        Title = "Game Selection",
+                        Content = "Select a game to load the script.",
                         Duration = 5
                     })
                 ]]
@@ -114,14 +114,14 @@ Tabs.Main:AddButton({
             else
                 Fluent:Notify({
                     Title = "Erro",
-                    Content = message or "Chave inválida.",
+                    Content = message or "Invalid key.",
                     Duration = 3
                 })
             end
         else
             Fluent:Notify({
-                Title = "Erro",
-                Content = "Por favor, insira uma chave.",
+                Title = "Error",
+                Content = "Please enter a key.",
                 Duration = 3
             })
         end
@@ -130,19 +130,19 @@ Tabs.Main:AddButton({
 
 -- Botão para obter uma chave (redireciona para Work.ink)
 Tabs.Main:AddButton({
-    Title = "Obter Chave",
-    Description = "Clique para obter uma chave válida.",
+    Title = "Get Key",
+    Description = "Click to get a valid key.",
     Callback = function()
         Fluent:Notify({
-            Title = "Redirecionando",
-            Content = "Você será redirecionado para obter uma chave...",
+            Title = "Redirecting",
+            Content = "You will be redirected to get a key...",
             Duration = 3
         })
         -- Aqui você pode adicionar um link ou instrução para o usuário
         -- Como o Roblox não permite abrir links diretamente, você pode exibir o link para o usuário copiar
         Fluent:Notify({
             Title = "Link",
-            Content = "Acesse: https://workink.net/1ZDH/2e7f6r2y",
+            Content = "Access: https://discord.gg/cYvRAyJaua",
             Duration = 10
         })
     end
@@ -151,7 +151,7 @@ Tabs.Main:AddButton({
 Window:SelectTab(1)
 
 Fluent:Notify({
-    Title = "Sistema de Chaves",
-    Content = "Por favor, insira uma chave válida para continuar.",
+    Title = "Key System",
+    Content = "Please enter a valid key to continue.",
     Duration = 5
 })
