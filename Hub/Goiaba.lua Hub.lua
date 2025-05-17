@@ -91,7 +91,7 @@ Tabs.Main:AddButton({
                         Description = "Load the script to Dig to Earth's CORE!",
                         Callback = function()
                             Window:Destroy()
-                            loadstring(game:HttpGet("https://gist.githubusercontent.com/Goiabalua/8cd1e81ce31375fbf65d480facfa9e03/raw/e5953afbcfa4de1abdfaa8df2c3cec0ec34f8cd7/gistfile1.txt",true))()
+                            loadstring(game:HttpGet("https://gist.githubusercontent.com/Goiabalua/8cd1e81ce31375fbf65d480facfa9e03/raw/b18c2921aff5b784f6ba7d1dd5256ce9983e0c53/gistfile1.txt",true))()
                         end
                     })
                     -- Botão para outro jogo (exemplo)
