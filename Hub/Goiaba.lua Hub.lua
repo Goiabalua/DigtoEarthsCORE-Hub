@@ -19,23 +19,19 @@ local Options = Fluent.Options
 -- Função melhorada para verificar a chave
 local function verifyKey(userKey)
     local success, response = pcall(function()
-        -- URL do seu Pastebin (substitua pela sua URL real)
-        -- Você deve criar um Work.ink que redireciona para este Pastebin
-        local pastebinUrl = "https://pastebin.com/raw/m3mipH5v"  -- Substitua XXXXXX pelo ID do seu Pastebin
-
-        -- Obter a chave válida do Pastebin
-        local validKey = game:HttpGet(pastebinUrl, true)
-        validKey = validKey:gsub("%s+", "")  -- Remove espaços e quebras de linha
- 
-        -- Verificar se a chave do usuário corresponde
-        return userKey:gsub("%s+", "") == validKey
+        local url = "https://goiabalua-hub-key-system.glitch.me/verify/" .. userKey
+        return game:HttpGet(url, true)
     end)
     
     if not success then
-        return false, "Connection error. Please try again later."
+        return false, "Erro de conexão. Tente novamente mais tarde."
     end
     
-    return response, success and "Key verified!" or "Invalid key."
+    if response == "VALID" then
+        return true, "Chave verificada!"
+    else
+        return false, "Chave inválida."
+    end
 end
 
 -- Input para inserir a chave
